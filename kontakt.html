@@ -86,9 +86,8 @@
       </div>
 
       <div class="contact-form-wrap">
-        <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="contactForm">
-          <input type="hidden" name="form-name" value="kontakt">
-          <p style="display:none;"><input name="bot-field"></p>
+        <form action="/.netlify/functions/kontakt" method="POST" class="contact-form" id="contactForm">
+          <input type="hidden" name="sprache" value="de">
 
           <div class="form-row">
             <div class="form-group">
@@ -147,8 +146,15 @@
             <textarea id="nachricht" name="nachricht" rows="5" placeholder="Kurze Beschreibung Ihres Projekts, Ihrer Herausforderung oder Ihrer Anfrage..."></textarea>
           </div>
 
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="dsgvo" value="ja" required>
+              Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> zu. *
+            </label>
+          </div>
+
           <button type="submit" class="btn btn-primary btn-full">Nachricht senden</button>
-          <p class="form-note">Ich antworte innerhalb von 24 Stunden. Keine Weitergabe Ihrer Daten an Dritte.</p>
+          <p class="form-note">Ich antworte innerhalb von 24 Stunden. Ihre Daten werden DSGVO-konform in der EU gespeichert.</p>
         </form>
       </div>
     </div>
@@ -164,6 +170,7 @@
       <a href="foerderung.html">Förderung</a>
       <a href="projekte.html">Projekte</a>
       <a href="kontakt.html">Kontakt</a>
+      <a href="datenschutz.html">Datenschutz</a>
     </div>
   </div>
 </footer>
@@ -190,11 +197,6 @@ if (proj) {
       if (opt.value === map[proj]) { opt.selected = true; break; }
     }
   }
-}
-// Netlify Form Success
-if (window.location.search.includes('success')) {
-  const form = document.getElementById('contactForm');
-  if (form) form.innerHTML = '<div class="form-success"><h3>Nachricht gesendet!</h3><p>Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p></div>';
 }
 </script>
 </body>

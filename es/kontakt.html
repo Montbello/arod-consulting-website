@@ -86,9 +86,8 @@
       </div>
 
       <div class="contact-form-wrap">
-        <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="contactForm">
-          <input type="hidden" name="form-name" value="kontakt">
-          <p style="display:none;"><input name="bot-field"></p>
+        <form action="/.netlify/functions/kontakt" method="POST" class="contact-form" id="contactForm">
+          <input type="hidden" name="sprache" value="es">
 
           <div class="form-row">
             <div class="form-group">
@@ -147,8 +146,15 @@
             <textarea id="nachricht" name="nachricht" rows="5" placeholder="Breve descripción de su proyecto, su reto o su consulta..."></textarea>
           </div>
 
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="dsgvo" value="ja" required>
+              Acepto el tratamiento de mis datos conforme a la <a href="../datenschutz.html" target="_blank">Política de Privacidad</a>. *
+            </label>
+          </div>
+
           <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
-          <p class="form-note">Respondo en un plazo de 24 horas. Sus datos no se compartirán con terceros.</p>
+          <p class="form-note">Respondo en 24 horas. Sus datos se almacenan de forma compatible con el RGPD en la UE.</p>
         </form>
       </div>
     </div>
@@ -164,6 +170,7 @@
       <a href="foerderung.html">Financiación</a>
       <a href="projekte.html">Proyectos</a>
       <a href="kontakt.html">Contacto</a>
+      <a href="../datenschutz.html">Privacidad</a>
     </div>
   </div>
 </footer>
@@ -190,11 +197,6 @@ if (proj) {
       if (opt.value === map[proj]) { opt.selected = true; break; }
     }
   }
-}
-// Éxito del formulario Netlify
-if (window.location.search.includes('success')) {
-  const form = document.getElementById('contactForm');
-  if (form) form.innerHTML = '<div class="form-success"><h3>¡Mensaje enviado!</h3><p>Me pondré en contacto con usted en un plazo de 24 horas.</p></div>';
 }
 </script>
 </body>

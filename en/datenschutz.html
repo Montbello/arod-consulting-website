@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — AROD Consulting Hamburg</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="../logo.png" alt="AROD Consulting" class="nav-logo-img"></a>
+    <div class="lang-switch"><a href="../datenschutz.html">DE</a><span class="active">EN</span><a href="../es/datenschutz.html">ES</a></div>
+    <ul class="nav-links">
+      <li><a href="leistungen.html">Services</a></li>
+      <li><a href="foerderung.html">BAFA &amp; INQA</a></li>
+      <li><a href="projekte.html">Projects</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Legal</span>
+    <h1 class="page-hero-title">Privacy Policy</h1>
+    <p class="page-hero-sub">Information on the processing of your personal data pursuant to Art. 13 GDPR.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 800px;">
+    <div class="legal-content">
+
+      <h2>1. Controller</h2>
+      <p>
+        Anderson Rodriguez<br>
+        Perthesweg 22, 20535 Hamburg, Germany<br>
+        Email: <a href="mailto:consulting.arod@gmail.com">consulting.arod@gmail.com</a>
+      </p>
+
+      <h2>2. Data Collected via the Contact Form</h2>
+      <p>When you use our contact form, we collect the following data:</p>
+      <ul>
+        <li>Name</li>
+        <li>Email address</li>
+        <li>Company (optional)</li>
+        <li>Consultation topic</li>
+        <li>Company size (optional)</li>
+        <li>Message text</li>
+        <li>Language of the enquiry</li>
+        <li>Anonymised IP hash (for abuse prevention, not personally identifiable)</li>
+      </ul>
+
+      <h2>3. Purpose of Processing</h2>
+      <p>The data collected is used exclusively to process your contact request and prepare for a consultation.</p>
+
+      <h2>4. Legal Basis</h2>
+      <p>Processing is based on Art. 6(1)(b) GDPR (pre-contractual measures) and your explicit consent pursuant to Art. 6(1)(a) GDPR.</p>
+
+      <h2>5. Storage Location and Data Security</h2>
+      <p>Your data is stored in a secured database at <strong>Supabase</strong>. Supabase operates its EU servers in the <strong>Frankfurt am Main, Germany</strong> region (AWS eu-central-1). Data transmission is encrypted via HTTPS/TLS.</p>
+
+      <h2>6. Retention Period</h2>
+      <p>Your data is stored for the duration of the business relationship and for a maximum of <strong>3 years</strong> thereafter, unless statutory retention obligations apply. After this period, your data will be deleted.</p>
+
+      <h2>7. Disclosure to Third Parties</h2>
+      <p>Your personal data will not be shared, sold or rented to third parties. Disclosure only occurs where we are legally obliged to do so.</p>
+
+      <h2>8. Your Rights</h2>
+      <p>Under the GDPR you have the following rights:</p>
+      <ul>
+        <li><strong>Access</strong> (Art. 15 GDPR): You may request information about the data stored about you at any time.</li>
+        <li><strong>Rectification</strong> (Art. 16 GDPR): You may request correction of inaccurate data.</li>
+        <li><strong>Erasure</strong> (Art. 17 GDPR): You may request deletion of your data, provided no statutory retention obligation applies.</li>
+        <li><strong>Restriction</strong> (Art. 18 GDPR): You may request restriction of processing.</li>
+        <li><strong>Objection</strong> (Art. 21 GDPR): You may object to processing at any time.</li>
+        <li><strong>Complaint</strong>: You have the right to lodge a complaint with the competent supervisory authority (Hamburg Commissioner for Data Protection and Freedom of Information, <a href="https://datenschutz.hamburg.de" target="_blank" rel="noopener">datenschutz.hamburg.de</a>).</li>
+      </ul>
+      <p>To exercise your rights, please contact: <a href="mailto:consulting.arod@gmail.com">consulting.arod@gmail.com</a></p>
+
+      <h2>9. Cookies</h2>
+      <p>This website does not use cookies for tracking or advertising. Only technically necessary resources (Google Fonts) are loaded.</p>
+
+      <h2>10. Google Fonts</h2>
+      <p>This website uses Google Fonts. When the page loads, a connection to Google servers is established. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in consistent visual presentation).</p>
+
+      <h2>11. Currency of This Policy</h2>
+      <p>As of: March 2026. We reserve the right to update this privacy policy as necessary.</p>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo">AROD<span class="accent">.</span>consulting</span>
+    <span class="footer-copy">© 2026 Anderson Rodriguez · Hamburg</span>
+    <div class="footer-links">
+      <a href="leistungen.html">Services</a>
+      <a href="foerderung.html">Funding</a>
+      <a href="projekte.html">Projects</a>
+      <a href="kontakt.html">Contact</a>
+      <a href="../datenschutz.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+</script>
+</body>
+</html>
