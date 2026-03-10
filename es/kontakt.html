@@ -71,16 +71,16 @@
         <div class="contact-topics">
           <h3>Temas para la Consulta Inicial</h3>
           <div class="contact-topic-tags">
-            <span>Business Development</span>
-            <span>Expansión PYME</span>
-            <span>Subvención BAFA</span>
-            <span>INQA Coaching</span>
-            <span>Infrastructure as Code</span>
+            <span>Verificar elegibilidad BAFA</span>
+            <span>Solicitar INQA Coaching</span>
+            <span>Calcular subvención</span>
+            <span>Preparar solicitud</span>
+            <span>Business Development 0–100</span>
+            <span>Crecimiento PYME &amp; Procesos</span>
+            <span>Digitalización (con subvención BAFA)</span>
+            <span>Desarrollo organizacional (INQA)</span>
             <span>Consultoría IT / SAP</span>
-            <span>Hammerpeace Festival</span>
-            <span>Sabor a mi Tierra</span>
-            <span>Alma Latina e.V.</span>
-            <span>SchuldenKompass</span>
+            <span>Infrastructure as Code</span>
           </div>
         </div>
       </div>
@@ -110,16 +110,21 @@
             <label for="thema">Tema *</label>
             <select id="thema" name="thema" required>
               <option value="">Por favor seleccione...</option>
-              <option>Business Development 0-100</option>
-              <option>Expansión PYME</option>
-              <option>Asesoría subvención BAFA</option>
-              <option>INQA Coaching</option>
-              <option>Infrastructure as Code</option>
-              <option>Consultoría IT / SAP</option>
-              <option>Hammerpeace Festival — Colaboración</option>
-              <option>Sabor a mi Tierra</option>
-              <option>Alma Latina e.V.</option>
-              <option>SchuldenKompass</option>
+              <optgroup label="Asesoría de subvenciones">
+                <option>BAFA — Verificar elegibilidad</option>
+                <option>INQA — Solicitar Coaching</option>
+                <option>Combinar BAFA + INQA</option>
+              </optgroup>
+              <optgroup label="Temas de consultoría (con subvención)">
+                <option>Business Development 0–100</option>
+                <option>Expansión PYME</option>
+                <option>Digitalización &amp; Optimización de procesos</option>
+                <option>Desarrollo organizacional &amp; Liderazgo</option>
+              </optgroup>
+              <optgroup label="IT &amp; Tecnología">
+                <option>Consultoría IT / SAP</option>
+                <option>Infrastructure as Code</option>
+              </optgroup>
               <option>Otro</option>
             </select>
           </div>

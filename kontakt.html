@@ -71,16 +71,16 @@
         <div class="contact-topics">
           <h3>Themen für das Erstgespräch</h3>
           <div class="contact-topic-tags">
-            <span>Business Development</span>
-            <span>KMU-Ausbau</span>
-            <span>BAFA Förderung</span>
-            <span>INQA Coaching</span>
-            <span>Infrastructure as Code</span>
+            <span>BAFA Förderberechtigung prüfen</span>
+            <span>INQA Coaching beantragen</span>
+            <span>Förderquote berechnen</span>
+            <span>Antrag vorbereiten</span>
+            <span>Business Development 0–100</span>
+            <span>KMU-Wachstum &amp; Prozesse</span>
+            <span>Digitalisierung (BAFA-gefördert)</span>
+            <span>Organisationsentwicklung (INQA)</span>
             <span>IT Consulting / SAP</span>
-            <span>Hammerpeace Festival</span>
-            <span>Sabor a mi Tierra</span>
-            <span>Alma Latina e.V.</span>
-            <span>SchuldenKompass</span>
+            <span>Infrastructure as Code</span>
           </div>
         </div>
       </div>
@@ -110,16 +110,21 @@
             <label for="thema">Thema *</label>
             <select id="thema" name="thema" required>
               <option value="">Bitte wählen...</option>
-              <option>Business Development 0-100</option>
-              <option>Unternehmensausbau KMU</option>
-              <option>BAFA Förderberatung</option>
-              <option>INQA Coaching</option>
-              <option>Infrastructure as Code</option>
-              <option>IT Consulting / SAP</option>
-              <option>Hammerpeace Festival — Partnerschaft</option>
-              <option>Sabor a mi Tierra</option>
-              <option>Alma Latina e.V.</option>
-              <option>SchuldenKompass</option>
+              <optgroup label="Förderberatung">
+                <option>BAFA — Förderberechtigung prüfen</option>
+                <option>INQA — Coaching beantragen</option>
+                <option>BAFA + INQA kombinieren</option>
+              </optgroup>
+              <optgroup label="Beratungsthemen (gefördert)">
+                <option>Business Development 0–100</option>
+                <option>Unternehmensausbau KMU</option>
+                <option>Digitalisierung &amp; Prozessoptimierung</option>
+                <option>Organisationsentwicklung &amp; Führung</option>
+              </optgroup>
+              <optgroup label="IT &amp; Technologie">
+                <option>IT Consulting / SAP</option>
+                <option>Infrastructure as Code</option>
+              </optgroup>
               <option>Sonstiges</option>
             </select>
           </div>
