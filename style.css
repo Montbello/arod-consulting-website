@@ -9,17 +9,18 @@
   --text:       #f0f4ff;
   --text-muted: #8896a8;
   --text-dim:   #4a5568;
-  /* Brand Colors (Logo: Navy · Red · Gold) */
-  --accent:     #f5c500;   /* Gold/Yellow — primary CTA */
+  /* Brand Colors — EXAKT Logo-Palette: Gold · Rot · Navy */
+  --accent:     #f5c500;   /* AROD Gold  */
   --accent2:    #e6b000;
-  --red:        #cc1634;   /* AROD Red */
-  --red2:       #e03535;
-  --blue:       #1a3a8c;   /* AROD Navy */
+  --red:        #cc1634;   /* AROD Rot   */
+  --red2:       #e8193a;
+  --blue:       #1a3a8c;   /* AROD Navy  */
   --blue2:      #2451b3;
-  --cyan:       #00e5ff;   /* Squash Cyan */
-  --pink:       #ff7eb3;   /* Squash Pink */
-  --green:      #39d98a;
-  --orange:     #ff8c42;
+  /* Aliase für alte Referenzen — alle auf Logo-Farben gemappt */
+  --cyan:       #2451b3;   /* → Navy     */
+  --green:      #f5c500;   /* → Gold     */
+  --orange:     #cc1634;   /* → Rot      */
+  --pink:       #2451b3;   /* → Navy     */
   --radius:     0.75rem;
   --shadow:     0 4px 24px rgba(0,0,0,0.5);
   --font:       'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -108,9 +109,9 @@ img { max-width: 100%; }
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 70% 50% at 65% 35%, rgba(245,197,0,0.10) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 15% 70%, rgba(224,53,53,0.08) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 35% at 80% 75%, rgba(0,229,255,0.06) 0%, transparent 50%);
+    radial-gradient(ellipse 70% 50% at 65% 30%, rgba(245,197,0,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 10% 65%, rgba(26,58,140,0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 45% 40% at 85% 75%, rgba(204,22,52,0.10) 0%, transparent 50%);
   pointer-events: none;
 }
 .hero-content {
@@ -220,10 +221,12 @@ img { max-width: 100%; }
   border-color: rgba(245,197,0,0.4);
   background: linear-gradient(135deg, var(--surface), rgba(245,197,0,0.05));
 }
-/* Service card color variants */
-.service-card:nth-child(2):hover { border-color: rgba(224,53,53,0.35); }
-.service-card:nth-child(3):hover { border-color: rgba(0,229,255,0.35); }
-.service-card:nth-child(4):hover { border-color: rgba(255,126,179,0.35); }
+/* Service card color variants — Logo-Palette */
+.service-card:nth-child(2):hover { border-color: rgba(204,22,52,0.4); box-shadow: 0 8px 32px rgba(204,22,52,0.08); }
+.service-card:nth-child(3):hover { border-color: rgba(26,58,140,0.5); box-shadow: 0 8px 32px rgba(26,58,140,0.10); }
+.service-card:nth-child(4):hover { border-color: rgba(245,197,0,0.35); }
+.service-card:nth-child(2) .service-icon { color: var(--red); }
+.service-card:nth-child(3) .service-icon { color: var(--blue2); }
 .service-icon {
   width: 2.5rem; height: 2.5rem;
   color: var(--accent); margin-bottom: 1.25rem;
@@ -306,8 +309,8 @@ img { max-width: 100%; }
   display: flex; align-items: center; justify-content: center;
 }
 .community-icon svg { width: 1.5rem; height: 1.5rem; }
-.community-icon--sport { background: rgba(246,173,85,0.12); color: var(--orange); }
-.community-icon--festival { background: rgba(57,217,138,0.12); color: var(--green); }
+.community-icon--sport { background: rgba(204,22,52,0.12); color: var(--red2); }
+.community-icon--festival { background: rgba(245,197,0,0.12); color: var(--accent); }
 .community-content h3 {
   font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.25rem;
 }
@@ -558,7 +561,7 @@ img { max-width: 100%; }
   padding: 0.75rem 1.25rem; border-radius: var(--radius);
   white-space: nowrap; min-width: 80px; text-align: center; flex-shrink: 0;
 }
-.foerderung-badge-logo--inqa { color: var(--cyan); background: rgba(0,229,255,0.1); border-color: rgba(0,229,255,0.3); }
+.foerderung-badge-logo--inqa { color: var(--blue2); background: rgba(26,58,140,0.15); border-color: rgba(36,81,179,0.4); }
 .foerderung-detail h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; }
 .foerderung-lead { color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; }
 .foerderung-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
@@ -598,10 +601,10 @@ img { max-width: 100%; }
   text-transform: uppercase; letter-spacing: 0.06em;
   padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 0.75rem;
 }
-.project-tag--festival { background: rgba(246,173,85,0.15); color: var(--orange); }
-.project-tag--fintech   { background: rgba(0,229,255,0.12); color: var(--accent); }
-.project-tag--food      { background: rgba(57,217,138,0.12); color: var(--green); }
-.project-tag--sport     { background: rgba(246,173,85,0.15); color: var(--orange); }
+.project-tag--festival { background: rgba(204,22,52,0.12); color: var(--red2); }
+.project-tag--fintech   { background: rgba(26,58,140,0.15); color: var(--blue2); }
+.project-tag--food      { background: rgba(245,197,0,0.12); color: var(--accent); }
+.project-tag--sport     { background: rgba(204,22,52,0.12); color: var(--red2); }
 .project-detail h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; }
 .project-lead { color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; }
 .project-detail-body { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
@@ -615,9 +618,9 @@ img { max-width: 100%; }
   font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem;
   border-radius: 2rem; display: inline-block;
 }
-.status-badge--active { background: rgba(57,217,138,0.15); color: var(--green); }
-.status-badge--development { background: rgba(0,229,255,0.15); color: var(--accent); }
-.status-badge--olympia { background: rgba(246,173,85,0.15); color: var(--orange); }
+.status-badge--active { background: rgba(245,197,0,0.15); color: var(--accent); }
+.status-badge--development { background: rgba(26,58,140,0.18); color: var(--blue2); }
+.status-badge--olympia { background: rgba(204,22,52,0.15); color: var(--red2); }
 .project-needs li {
   padding: 0.5rem 0; color: var(--text-muted); font-size: 0.9rem;
   border-bottom: 1px solid var(--border);
@@ -658,6 +661,9 @@ img { max-width: 100%; }
   transition: border-color 0.2s;
 }
 .vision-pillar:hover { border-color: var(--accent); }
+.vision-pillar:nth-child(2):hover { border-color: var(--red); }
+.vision-pillar:nth-child(3):hover { border-color: var(--blue2); }
+.vision-pillar:nth-child(4):hover { border-color: var(--accent); }
 .vision-pillar-icon {
   font-size: 0.6rem; color: var(--accent); margin-bottom: 0.75rem;
   letter-spacing: 0.1em;
@@ -666,7 +672,7 @@ img { max-width: 100%; }
 .vision-pillar p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; }
 
 /* ── FOERDERUNG CARD LOGO INQA VARIANT ─────────────────────── */
-.foerderung-card-logo--inqa { color: var(--cyan); background: rgba(0,229,255,0.1); border-color: rgba(0,229,255,0.25); }
+.foerderung-card-logo--inqa { color: var(--blue2); background: rgba(26,58,140,0.15); border-color: rgba(36,81,179,0.3); }
 
 /* ── SERVICE BENEFITS BAR ──────────────────────────────────── */
 .service-benefits-bar {
@@ -685,7 +691,7 @@ img { max-width: 100%; }
 
 /* ── SERVICE DETAIL LIST BENEFITS VARIANT ─────────────────── */
 .service-detail-list--benefits li { align-items: flex-start; }
-.service-detail-list--benefits li::before { content: "+"; color: var(--green); font-weight: 700; }
+.service-detail-list--benefits li::before { content: "+"; color: var(--accent); font-weight: 700; }
 .service-detail-list--benefits strong { color: var(--text); }
 
 /* ── METHOD STEPS (Beratungsansatz) ────────────────────────── */
@@ -720,8 +726,8 @@ img { max-width: 100%; }
 }
 .social-impact-box::before {
   content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--accent), transparent);
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--red), var(--accent));
   border-radius: calc(var(--radius) * 1.5) calc(var(--radius) * 1.5) 0 0;
 }
 .social-impact-header { margin-bottom: 1.5rem; }
