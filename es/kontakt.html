@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto AROD Consulting — Consulta inicial gratuita. Business Development, Consultoría IT y Asesoría de subvenciones BAFA/INQA en Hamburgo.">
+  <title>Contacto — AROD Consulting Hamburg</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">AROD<span class="accent">.</span>consulting</a>
+    <div class="lang-switch"><a href="../kontakt.html">DE</a><a href="../en/kontakt.html">EN</a><span class="active">ES</span></div>
+    <ul class="nav-links">
+      <li><a href="leistungen.html">Servicios</a></li>
+      <li><a href="foerderung.html">BAFA &amp; INQA</a></li>
+      <li><a href="projekte.html">Proyectos</a></li>
+      <li><a href="kontakt.html" class="nav-cta active">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">&#9776;</button>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Contacto</span>
+    <h1 class="page-hero-title">¿Listo para Su Proyecto?</h1>
+    <p class="page-hero-sub">Consulta inicial gratuita — analizo su situación y le muestro dónde el desarrollo empresarial, la IT y las subvenciones públicas pueden impulsar su empresa.</p>
+  </div>
+</section>
+
+<!-- Área Principal de Contacto -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Cómo Contactarme</h2>
+        <div class="contact-details">
+          <a href="mailto:consulting.arod@gmail.com" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            consulting.arod@gmail.com
+          </a>
+          <span class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Hamburgo, Alemania
+          </span>
+        </div>
+
+        <div class="contact-promise">
+          <h3>Qué Puede Esperar</h3>
+          <ul class="service-detail-list">
+            <li>Consulta inicial gratuita y sin compromiso</li>
+            <li>Respuesta en un plazo de 24 horas</li>
+            <li>Verificación de su elegibilidad para subvenciones BAFA/INQA</li>
+            <li>Evaluación honesta — no una conversación de ventas</li>
+          </ul>
+        </div>
+
+        <div class="contact-topics">
+          <h3>Temas para la Consulta Inicial</h3>
+          <div class="contact-topic-tags">
+            <span>Business Development</span>
+            <span>Expansión PYME</span>
+            <span>Subvención BAFA</span>
+            <span>INQA Coaching</span>
+            <span>Infrastructure as Code</span>
+            <span>Consultoría IT / SAP</span>
+            <span>Hammerpeace Festival</span>
+            <span>Sabor a mi Tierra</span>
+            <span>Alma Latina e.V.</span>
+            <span>SchuldenKompass</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="contactForm">
+          <input type="hidden" name="form-name" value="kontakt">
+          <p style="display:none;"><input name="bot-field"></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre *</label>
+              <input type="text" id="name" name="name" required placeholder="Su nombre">
+            </div>
+            <div class="form-group">
+              <label for="company">Empresa</label>
+              <input type="text" id="company" name="company" placeholder="Su empresa">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required placeholder="su@correo.com">
+          </div>
+
+          <div class="form-group">
+            <label for="thema">Tema *</label>
+            <select id="thema" name="thema" required>
+              <option value="">Por favor seleccione...</option>
+              <option>Business Development 0-100</option>
+              <option>Expansión PYME</option>
+              <option>Asesoría subvención BAFA</option>
+              <option>INQA Coaching</option>
+              <option>Infrastructure as Code</option>
+              <option>Consultoría IT / SAP</option>
+              <option>Hammerpeace Festival — Colaboración</option>
+              <option>Sabor a mi Tierra</option>
+              <option>Alma Latina e.V.</option>
+              <option>SchuldenKompass</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mitarbeiter">Tamaño de la empresa</label>
+            <select id="mitarbeiter" name="mitarbeiter">
+              <option value="">Por favor seleccione...</option>
+              <option>1 (Autónomo)</option>
+              <option>2–10 empleados</option>
+              <option>11–49 empleados</option>
+              <option>50–249 empleados</option>
+              <option>250+ empleados</option>
+              <option>Todavía no tengo empresa (planificando fundar)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nachricht">Mensaje</label>
+            <textarea id="nachricht" name="nachricht" rows="5" placeholder="Breve descripción de su proyecto, su reto o su consulta..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
+          <p class="form-note">Respondo en un plazo de 24 horas. Sus datos no se compartirán con terceros.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo">AROD<span class="accent">.</span>consulting</span>
+    <span class="footer-copy">© 2026 Anderson Rodriguez · Hamburg</span>
+    <div class="footer-links">
+      <a href="leistungen.html">Servicios</a>
+      <a href="foerderung.html">Financiación</a>
+      <a href="projekte.html">Proyectos</a>
+      <a href="kontakt.html">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+// Pre-rellenar tema desde parámetro URL
+const params = new URLSearchParams(window.location.search);
+const proj = params.get('projekt');
+if (proj) {
+  const map = {
+    hammerpeace: 'Hammerpeace Festival — Colaboración',
+    sabor: 'Sabor a mi Tierra',
+    alma: 'Alma Latina e.V.',
+  };
+  const sel = document.getElementById('thema');
+  if (sel && map[proj]) {
+    for (let opt of sel.options) {
+      if (opt.value === map[proj]) { opt.selected = true; break; }
+    }
+  }
+}
+// Éxito del formulario Netlify
+if (window.location.search.includes('success')) {
+  const form = document.getElementById('contactForm');
+  if (form) form.innerHTML = '<div class="form-success"><h3>¡Mensaje enviado!</h3><p>Me pondré en contacto con usted en un plazo de 24 horas.</p></div>';
+}
+</script>
+</body>
+</html>
