@@ -10,10 +10,12 @@
   --text-muted: #8896a8;
   --text-dim:   #4a5568;
   /* Brand Colors (Logo: Navy · Red · Gold) */
-  --accent:     #f5c500;   /* Gold — primary CTA */
+  --accent:     #f5c500;   /* Gold/Yellow — primary CTA */
   --accent2:    #e6b000;
-  --red:        #e03535;   /* AROD Red */
-  --blue:       #1a5fd4;   /* AROD Navy */
+  --red:        #cc1634;   /* AROD Red */
+  --red2:       #e03535;
+  --blue:       #1a3a8c;   /* AROD Navy */
+  --blue2:      #2451b3;
   --cyan:       #00e5ff;   /* Squash Cyan */
   --pink:       #ff7eb3;   /* Squash Pink */
   --green:      #39d98a;
@@ -70,8 +72,11 @@ img { max-width: 100%; }
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
-  font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em;
-  color: var(--text);
+  display: flex; align-items: center;
+  background: #fff; border-radius: 6px; padding: 3px 8px;
+}
+.nav-logo-img {
+  height: 36px; width: auto;
 }
 .nav-links {
   display: flex; align-items: center; gap: 2rem;
