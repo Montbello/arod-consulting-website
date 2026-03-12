@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consultor&iacute;a BAFA &amp; INQA explicada &mdash; Qu&eacute; hacemos, qu&eacute; obtienes, cu&aacute;nto cuesta. 80% financiado por el Estado. AROD Consulting Hamburg.">
+  <title>Consultor&iacute;a Explicada &mdash; Subvenciones BAFA &amp; INQA | AROD Consulting</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Flyer-specific styles */
+    .flyer-section { padding: 3rem 0; }
+    .flyer-section--alt { background: var(--bg-2); }
+    .q-label {
+      display: inline-block; font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.3rem 0.8rem; border-radius: 0.25rem; margin-bottom: 0.8rem;
+    }
+    .q-label--gold { background: rgba(245,197,0,0.12); color: var(--accent); border: 1px solid rgba(245,197,0,0.25); }
+    .q-label--red { background: rgba(204,22,52,0.12); color: var(--red); border: 1px solid rgba(204,22,52,0.25); }
+    .q-label--blue { background: rgba(26,58,140,0.15); color: var(--blue); border: 1px solid rgba(26,58,140,0.3); }
+    .q-label--green { background: rgba(16,185,129,0.12); color: #10b981; border: 1px solid rgba(16,185,129,0.25); }
+
+    .flyer-h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3; }
+    .flyer-h2--gold { color: var(--accent); }
+    .flyer-h2--red { color: var(--red); }
+    .flyer-h2--blue { color: var(--blue); }
+    .flyer-h2--green { color: #10b981; }
+    .flyer-lead { color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem; }
+    .flyer-lead strong { color: var(--text); }
+
+    .hl-list { list-style: none; padding: 0; margin: 1rem 0 0; }
+    .hl-list li {
+      font-size: 0.95rem; color: var(--text); padding: 0.6rem 0 0.6rem 1.6rem;
+      position: relative; border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .hl-list li::before {
+      content: ''; position: absolute; left: 0; top: 0.85rem;
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+    .hl-list--gold li::before { background: var(--accent); }
+    .hl-list--red li::before { background: var(--red); }
+    .hl-list--green li::before { background: #10b981; }
+    .hl-list li span { color: var(--text-muted); font-size: 0.85rem; display: block; margin-top: 0.15rem; }
+
+    .flyer-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 1.2rem; }
+    .flyer-card {
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: 0.75rem; padding: 1.4rem;
+    }
+    .flyer-card h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .flyer-card h4.gold { color: var(--accent); }
+    .flyer-card h4.red { color: var(--red); }
+    .flyer-card h4.blue { color: var(--blue); }
+    .flyer-card h4.green { color: #10b981; }
+    .flyer-card ul { list-style: none; padding: 0; }
+    .flyer-card li {
+      font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;
+      padding: 0.2rem 0 0.2rem 1rem; position: relative;
+    }
+    .flyer-card li::before {
+      content: ''; position: absolute; left: 0; top: 0.55rem;
+      width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+    }
+    .flyer-card--green li::before { background: #10b981; }
+    .flyer-card--blue li::before { background: var(--blue); }
+    .flyer-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+    .funding-path { display: flex; align-items: center; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap; }
+    .path-node {
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: 0.75rem; padding: 0.7rem 1.2rem;
+      font-size: 0.85rem; font-weight: 600; text-align: center;
+    }
+    .path-node small { display: block; font-weight: 400; color: var(--text-muted); font-size: 0.75rem; }
+    .path-arrow { color: var(--accent); font-size: 1.3rem; font-weight: 700; }
+
+    .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.2rem; }
+    .profile-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-bottom: 0.3rem; }
+    .profile-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+    .flyer-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.7rem; margin-top: 1.2rem; }
+    .flyer-step {
+      text-align: center; background: var(--bg-2);
+      border: 1px solid var(--border); border-radius: 0.75rem;
+      padding: 1.2rem 0.5rem;
+    }
+    .flyer-step-num {
+      display: inline-block; width: 32px; height: 32px; line-height: 32px;
+      border-radius: 50%; background: var(--accent); color: var(--bg);
+      font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;
+    }
+    .flyer-step-title { font-size: 0.8rem; font-weight: 600; color: var(--text); display: block; }
+    .flyer-step-desc { font-size: 0.7rem; color: var(--text-muted); display: block; margin-top: 0.2rem; }
+
+    .cost-tbl { width: 100%; border-collapse: collapse; margin-top: 1.2rem; }
+    .cost-tbl th, .cost-tbl td {
+      padding: 0.8rem 1rem; text-align: left; font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .cost-tbl th { color: var(--text-muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .cost-tbl .hl-row { background: rgba(245,197,0,0.06); }
+    .cost-tbl .hl-row td { color: var(--accent); font-weight: 700; }
+
+    @media (max-width: 768px) {
+      .flyer-cards, .profile-grid { grid-template-columns: 1fr; }
+      .flyer-steps { grid-template-columns: repeat(3, 1fr); }
+      .funding-path { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="../logo.png" alt="AROD Consulting" class="nav-logo-img"></a>
+    <div class="lang-switch"><a href="../foerderung-flyer.html">DE</a><a href="../en/foerderung-flyer.html">EN</a><span class="active">ES</span><a href="../pt/foerderung-flyer.html">PT</a></div>
+    <ul class="nav-links">
+      <li><a href="leistungen.html">Servicios</a></li>
+      <li><a href="foerderung.html">BAFA &amp; INQA</a></li>
+      <li><a href="foerderung-flyer.html" class="active">Consultor&iacute;a Explicada</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Men&uacute;">&#9776;</button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="page-hero page-hero--accent">
+  <div class="container">
+    <span class="section-label">80% financiado por el Estado</span>
+    <h1 class="page-hero-title">Consultor&iacute;a profesional para tu negocio &mdash; <span class="accent">el Estado paga el 80%</span></h1>
+    <p class="page-hero-sub">&iquest;Tienes una idea de negocio o una peque&ntilde;a empresa? &iquest;Quieres profesionalizarla pero no sabes exactamente c&oacute;mo? Existen programas de financiaci&oacute;n estatal que te ayudan &mdash; y yo te acompa&ntilde;o en todo el proceso.</p>
+  </div>
+</section>
+
+<!-- POR QUE -->
+<section class="flyer-section" id="porque">
+  <div class="container">
+    <span class="q-label q-label--gold">&iquest;Por qu&eacute; necesitas esto?</span>
+    <h2 class="flyer-h2 flyer-h2--gold">Porque no tienes que descubrirlo todo solo/a</h2>
+    <p class="flyer-lead">
+      Quiz&aacute;s tienes una gran idea de negocio &mdash; o ya tienes una peque&ntilde;a empresa. Pero te preguntas: <strong>&iquest;C&oacute;mo lo organizo correctamente? &iquest;C&oacute;mo consigo clientes? &iquest;C&oacute;mo funciona la contabilidad? &iquest;Qu&eacute; software necesito?</strong>
+    </p>
+    <p class="flyer-lead">
+      Exactamente para eso existen <strong>dos programas de financiaci&oacute;n del gobierno alem&aacute;n</strong> &mdash; BAFA e INQA. El Estado paga el <strong>80% de los costes de consultor&iacute;a</strong> porque quiere que las peque&ntilde;as empresas tengan &eacute;xito. Obtienes un consultor experimentado a tu lado que te explica todo, construye sistemas para ti y te ense&ntilde;a a gestionar tu negocio. <strong>No necesitas ser un experto &mdash; ese es mi trabajo.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- QUE (BAFA) -->
+<section class="flyer-section flyer-section--alt" id="bafa-detalles">
+  <div class="container">
+    <span class="q-label q-label--gold">&iquest;Qu&eacute; hago exactamente por ti?</span>
+    <h2 class="flyer-h2 flyer-h2--gold">Programa 1: BAFA &mdash; Construir tu negocio</h2>
+    <p class="flyer-lead">El programa BAFA (Oficina Federal de Econom&iacute;a) te ayuda a montar tu negocio correctamente desde cero. Esto es concretamente lo que hacemos juntos:</p>
+    <ul class="hl-list hl-list--gold">
+      <li><strong>Analizamos juntos tu idea o negocio</strong><span>&iquest;Qu&eacute; funciona? &iquest;Qu&eacute; falta? &iquest;D&oacute;nde est&aacute;n las oportunidades? Lo eval&uacute;o todo contigo.</span></li>
+      <li><strong>Te creo un plan de negocio</strong><span>Para que sepas exactamente hacia d&oacute;nde va tu empresa &mdash; y puedas presentarlo a bancos o inversores.</span></li>
+      <li><strong>Construimos una estrategia de marketing</strong><span>P&aacute;gina web, redes sociales, Google &mdash; te muestro c&oacute;mo encontrar clientes y hacer visible tu oferta.</span></li>
+      <li><strong>Te configuro la contabilidad y planificaci&oacute;n financiera</strong><span>Ingresos, gastos, impuestos &mdash; tendr&aacute;s tus n&uacute;meros bajo control, sin sorpresas desagradables.</span></li>
+      <li><strong>Digitalizamos tus procesos</strong><span>Facturas, gesti&oacute;n de clientes, agenda &mdash; con las herramientas adecuadas ahorras tiempo cada d&iacute;a.</span></li>
+      <li><strong>Te muestro qu&eacute; software y herramientas necesitas</strong><span>Sin compras innecesarias &mdash; solo lo que realmente encaja con tu negocio.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- QUE (INQA) -->
+<section class="flyer-section" id="inqa-detalles">
+  <div class="container">
+    <span class="q-label q-label--red">&iquest;Qu&eacute; hago exactamente por ti?</span>
+    <h2 class="flyer-h2 flyer-h2--red">Programa 2: INQA &mdash; Profesionalizar tu negocio</h2>
+    <p class="flyer-lead">El Coaching INQA (Ministerio Federal de Trabajo) es para empresas que ya funcionan y quieren dar el siguiente paso. 12 d&iacute;as de consultor&iacute;a durante 4&ndash;7 meses &mdash; intensivo y pr&aacute;ctico:</p>
+    <ul class="hl-list hl-list--red">
+      <li><strong>Optimizamos tus flujos de trabajo</strong><span>&iquest;D&oacute;nde se pierde tiempo? &iquest;Qu&eacute; pasos son innecesarios? Hacemos tu operaci&oacute;n diaria m&aacute;s eficiente.</span></li>
+      <li><strong>Te capacito a ti y a tu equipo en nuevos m&eacute;todos</strong><span>M&eacute;todos de trabajo modernos que funcionan inmediatamente en la pr&aacute;ctica &mdash; sin teor&iacute;a aburrida.</span></li>
+      <li><strong>Implementamos un panel de control (KPIs)</strong><span>Para que veas de un vistazo c&oacute;mo va tu negocio &mdash; ingresos, clientes, costes, todo transparente.</span></li>
+      <li><strong>Acompa&ntilde;o la introducci&oacute;n de nuevos sistemas</strong><span>Ya sea gesti&oacute;n de inventario, CRM o software de contabilidad &mdash; lo configuro y te ense&ntilde;o c&oacute;mo funciona.</span></li>
+      <li><strong>Desarrollamos tus habilidades de liderazgo</strong><span>&iquest;C&oacute;mo motivas a empleados? &iquest;C&oacute;mo delegas eficazmente? Te asesoro como l&iacute;der.</span></li>
+      <li><strong>Al final recibes un plan de acci&oacute;n completo</strong><span>Una hoja de ruta concreta para los pr&oacute;ximos 12 meses &mdash; para que sepas exactamente qu&eacute; viene despu&eacute;s.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="flyer-section flyer-section--alt" id="resultados">
+  <div class="container">
+    <span class="q-label q-label--green">&iquest;Qu&eacute; puedes hacer realmente despu&eacute;s?</span>
+    <h2 class="flyer-h2 flyer-h2--green">Estos son tus resultados concretos</h2>
+    <p class="flyer-lead">Sin promesas vac&iacute;as &mdash; esto es lo que te llevas:</p>
+    <div class="flyer-cards">
+      <div class="flyer-card flyer-card--green">
+        <h4 class="green">Despu&eacute;s de la consultor&iacute;a BAFA puedes:</h4>
+        <ul>
+          <li>Explicar claramente tu modelo de negocio &mdash; a ti mismo/a, clientes e inversores</li>
+          <li>Identificar tu p&uacute;blico objetivo y alcanzarlo eficazmente</li>
+          <li>Gestionar tus finanzas de forma independiente (ingresos, gastos, impuestos)</li>
+          <li>Utilizar herramientas digitales profesionales en tu d&iacute;a a d&iacute;a</li>
+          <li>Continuar trabajando de forma aut&oacute;noma &mdash; sin ayuda externa constante</li>
+          <li>Ejecutar un plan claro de 12 meses</li>
+        </ul>
+      </div>
+      <div class="flyer-card flyer-card--green">
+        <h4 class="green">Despu&eacute;s del coaching INQA puedes:</h4>
+        <ul>
+          <li>Dirigir tu empresa de forma eficiente y profesional</li>
+          <li>Optimizar procesos y ahorrar tiempo &mdash; cada d&iacute;a</li>
+          <li>Liderar y motivar a tu equipo de forma independiente</li>
+          <li>Medir el &eacute;xito de tu negocio con paneles de KPIs</li>
+          <li>Manejar con confianza nuevos sistemas y herramientas</li>
+          <li>Escalar y crecer &mdash; con una hoja de ruta clara</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPUES -->
+<section class="flyer-section" id="despues">
+  <div class="container">
+    <span class="q-label q-label--blue">&iquest;Qu&eacute; pasa despu&eacute;s de la consultor&iacute;a?</span>
+    <h2 class="flyer-h2 flyer-h2--blue">La consultor&iacute;a es el comienzo &mdash; no el final</h2>
+    <p class="flyer-lead">Despu&eacute;s de BAFA e INQA, tienes acceso a m&aacute;s programas de financiaci&oacute;n. Tu negocio crece &mdash; y la financiaci&oacute;n crece contigo:</p>
+    <div class="funding-path">
+      <div class="path-node" style="border-color: var(--accent);"><strong style="color: var(--accent);">BAFA</strong><small>Construir negocio</small><small>hasta 3.200 &euro; subvenci&oacute;n</small></div>
+      <span class="path-arrow">&rarr;</span>
+      <div class="path-node" style="border-color: var(--red);"><strong style="color: var(--red);">INQA</strong><small>Profesionalizar</small><small>hasta 11.520 &euro; subvenci&oacute;n</small></div>
+      <span class="path-arrow">&rarr;</span>
+      <div class="path-node" style="border-color: var(--blue);"><strong style="color: var(--blue);">ZIM</strong><small>Innovaci&oacute;n e I+D</small><small>hasta 380.000 &euro;</small></div>
+      <span class="path-arrow">&rarr;</span>
+      <div class="path-node" style="border-color: #10b981;"><strong style="color: #10b981;">M&aacute;s</strong><small>KfW, EXIST, fondos UE</small><small>seg&uacute;n proyecto</small></div>
+    </div>
+    <div class="flyer-cards" style="margin-top: 1.2rem;">
+      <div class="flyer-card flyer-card--blue">
+        <h4 class="blue">ZIM &mdash; Programa Central de Innovaci&oacute;n para PYMES</h4>
+        <p>Para investigaci&oacute;n y desarrollo de nuevos productos, procesos o servicios. Hasta <strong>380.000 &euro;</strong> de financiaci&oacute;n para proyectos de innovaci&oacute;n.</p>
+      </div>
+      <div class="flyer-card flyer-card--blue">
+        <h4 class="blue">M&aacute;s oportunidades</h4>
+        <ul>
+          <li><strong>EXIST:</strong> Financiaci&oacute;n para startups tecnol&oacute;gicas</li>
+          <li><strong>KfW:</strong> Pr&eacute;stamos a bajo inter&eacute;s para crecimiento</li>
+          <li><strong>Programas regionales:</strong> Subvenciones de Hamburgo y m&aacute;s</li>
+          <li><strong>Programas UE:</strong> Fondos europeos para proyectos internacionales</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIEN -->
+<section class="flyer-section flyer-section--alt" id="consultor">
+  <div class="container">
+    <span class="q-label q-label--gold">&iquest;Qui&eacute;n te asesora?</span>
+    <h2 class="flyer-h2 flyer-h2--gold">AROD Consulting &mdash; Consultor&iacute;a IT &amp; Desarrollo de Negocios</h2>
+    <p class="flyer-lead">Soy Anderson Rodriguez &mdash; combino experiencia en IT con desarrollo de negocios. Eso significa que no solo obtienes estrategia, sino tambi&eacute;n la implementaci&oacute;n t&eacute;cnica de una sola fuente.</p>
+    <div class="profile-grid">
+      <div class="profile-item">
+        <h4>IT y Automatizaci&oacute;n</h4>
+        <p>Infrastructure as Code (Terraform, Docker, Kubernetes), soluciones Cloud (AWS, Azure), pipelines CI/CD, monitoreo, seguridad IT. Automatizo tu IT para que te concentres en tu negocio.</p>
+      </div>
+      <div class="profile-item">
+        <h4>Negocios y Estrategia</h4>
+        <p>Especialista en Administraci&oacute;n de Empresas (nivel Bachelor), Consultor SAP (S/4HANA, MM, SD &mdash; con distinci&oacute;n), 10+ a&ntilde;os en consultor&iacute;a y optimizaci&oacute;n de procesos. Modelos de negocio, planificaci&oacute;n financiera, marketing.</p>
+      </div>
+      <div class="profile-item">
+        <h4">&iquest;Qu&eacute; hace especial a AROD?</h4>
+        <p><strong>Combinaci&oacute;n de IT + Negocio.</strong> Muchos consultores solo hacen estrategia &mdash; yo tambi&eacute;n implemento la parte t&eacute;cnica. Infraestructura cloud, despliegue de software, automatizaci&oacute;n &mdash; todo de una sola mano.</p>
+      </div>
+      <div class="profile-item">
+        <h4>Certificaciones</h4>
+        <p>Coach INQA autorizado, consultor registrado BAFA, Inform&aacute;tico certificado (IHK), certificado SAP, Ingeniero Cloud &amp; DevOps. Sede: Hamburgo, Alemania.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO -->
+<section class="flyer-section" id="proceso">
+  <div class="container">
+    <span class="q-label q-label--gold">&iquest;C&oacute;mo funciona?</span>
+    <h2 class="flyer-h2">5 pasos sencillos &mdash; yo me encargo de casi todo</h2>
+    <p class="flyer-lead">No necesitas rellenar formularios ni llamar a ninguna oficina. Yo me ocupo del papeleo.</p>
+    <div class="flyer-steps">
+      <div class="flyer-step"><span class="flyer-step-num">1</span><span class="flyer-step-title">Primera llamada</span><span class="flyer-step-desc">Gratis, 20&ndash;30 min.</span></div>
+      <div class="flyer-step"><span class="flyer-step-num">2</span><span class="flyer-step-title">Solicitud</span><span class="flyer-step-desc">Yo presento la solicitud por ti.</span></div>
+      <div class="flyer-step"><span class="flyer-step-num">3</span><span class="flyer-step-title">Consultor&iacute;a</span><span class="flyer-step-desc">Presencial + remoto juntos.</span></div>
+      <div class="flyer-step"><span class="flyer-step-num">4</span><span class="flyer-step-title">Resultados</span><span class="flyer-step-desc">Planes, herramientas, conocimiento.</span></div>
+      <div class="flyer-step"><span class="flyer-step-num">5</span><span class="flyer-step-title">Pago</span><span class="flyer-step-desc">Estado paga 80%, t&uacute; solo 20%.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- COSTE -->
+<section class="flyer-section flyer-section--alt" id="costes">
+  <div class="container">
+    <span class="q-label q-label--gold">&iquest;Cu&aacute;nto me cuesta?</span>
+    <h2 class="flyer-h2">Costes transparentes &mdash; sin sorpresas</h2>
+    <p class="flyer-lead">El Estado cubre el 80%. Aqu&iacute; ves exactamente lo que pagas:</p>
+    <table class="cost-tbl">
+      <thead><tr><th>Programa</th><th>Valor total</th><th>Estado paga (80%)</th><th>T&uacute; pagas (20%)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>BAFA</strong></td><td>4.000 &euro;</td><td>3.200 &euro;</td><td><strong>800 &euro;</strong></td></tr>
+        <tr><td><strong>INQA</strong></td><td>14.400 &euro;</td><td>11.520 &euro;</td><td><strong>2.880 &euro;</strong></td></tr>
+        <tr class="hl-row"><td><strong>Combinado</strong></td><td>18.400 &euro;</td><td>14.720 &euro;</td><td><strong>3.680 &euro;</strong></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">Todos los precios netos. Sin costes ocultos. Pago a plazos posible bajo acuerdo.</p>
+  </div>
+</section>
+
+<!-- QUIEN PUEDE -->
+<section class="flyer-section" id="requisitos">
+  <div class="container">
+    <span class="q-label q-label--gold">&iquest;Qui&eacute;n puede participar?</span>
+    <h2 class="flyer-h2">Los requisitos son sencillos</h2>
+    <div class="flyer-cards">
+      <div class="flyer-card">
+        <h4 class="gold">BAFA &mdash; Para startups y empresas j&oacute;venes</h4>
+        <ul>
+          <li>Has fundado una empresa (incluso reci&eacute;n creada)</li>
+          <li>Menos de 250 empleados</li>
+          <li>Facturaci&oacute;n anual inferior a 50 millones de euros</li>
+          <li>Incluso si tienes dificultades financieras actualmente</li>
+          <li>Todos los sectores bienvenidos</li>
+        </ul>
+      </div>
+      <div class="flyer-card">
+        <h4 class="red">INQA &mdash; Para empresas establecidas</h4>
+        <ul>
+          <li>Tu empresa existe desde hace al menos 2 a&ntilde;os</li>
+          <li>De 1 a 249 empleados</li>
+          <li>Registrada en Alemania</li>
+          <li>Quieres mejorar o digitalizar procesos</li>
+          <li>Todos los sectores bienvenidos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--dark cta-section">
+  <div class="container cta-inner">
+    <h2>&iquest;Listo/a para el siguiente paso?</h2>
+    <p>Hablemos &mdash; gratis y sin compromiso. En 20&ndash;30 minutos definimos qu&eacute; programa te conviene y c&oacute;mo empezar.</p>
+    <a href="kontakt.html" class="btn btn-primary">Reservar primera consulta gratuita</a>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">O llama directamente: <strong>+49 176 20600448</strong></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo">AROD<span class="accent">.</span>consulting</span>
+    <span class="footer-copy">&copy; 2026 Anderson Rodriguez &middot; Hamburg</span>
+    <div class="footer-links">
+      <a href="leistungen.html">Servicios</a>
+      <a href="foerderung.html">Subvenciones</a>
+      <a href="projekte.html">Proyectos</a>
+      <a href="kontakt.html">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+</script>
+</body>
+</html>
